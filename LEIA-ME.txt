@@ -1,0 +1,34 @@
+STATUS FILME 2.1
+================
+
+1) GERAR O .EXE
+   - Precisa do Python instalado (python.org, marque "Add to PATH").
+   - De dois cliques em build.bat.
+   - O programa fica em dist\StatusFilme.exe (pode mover para onde quiser).
+
+2) PRIMEIRO USO
+   - Abra o StatusFilme.exe. Ele fica escondido na bandeja, perto do relogio
+     (talvez dentro da setinha ^).
+   - Clique com o botao direito no icone:
+       Iniciar com o Windows  -> liga/desliga
+       Pausar status          -> esconde temporariamente do Discord
+       Abrir configuracao     -> edita o config.json
+       Recarregar configuracao-> aplica o que voce mudou
+       Ver log                -> ajuda a descobrir problemas
+
+3) SINOPSE, POSTER, BOTOES E BARRA DE PROGRESSO (TMDB, gratis)
+   - Crie uma conta em https://www.themoviedb.org
+   - Va em Configuracoes > API e peca uma chave (uso pessoal).
+   - Copie a "Chave da API" e cole em "tmdb_chave" no config.json.
+   - Clique em "Recarregar configuracao".
+   Sem a chave, o programa funciona como antes (icone de pipoca e sinopses manuais).
+
+4) OBSERVACOES
+   - A barra de progresso e estimada pela duracao do filme a partir do momento
+     em que ele foi aberto; ela nao acompanha pausas nem avancos.
+   - Voce nao ve os proprios botoes (IMDb/Trailer) no seu perfil; os outros veem.
+   - Para outros players, adicione o nome do processo em "players" no config.json.
+   - Configuracao, cache e log ficam em %APPDATA%\StatusFilme
+   - Nomes de arquivo sao lidos pelo guessit (o mesmo do Plex/Kodi). Se preferir o
+     leitor simples antigo, coloque "usar_guessit": false no config.json.
+   - Para depurar com janela: python status_filme.py --console
